@@ -5,9 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kasper | Template Two</title>
+        <!-- swiper library CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.css">
+        <!-- AOS library CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- normalize CSS -->
         <link rel="stylesheet" href="css/normalize.css">
-        <!-- labry fonta -->
+        <!-- library fonta -->
         <link rel="stylesheet" href="css/all.min.css">
         <!-- main file of CSS -->
         <link rel="stylesheet" href="css/main.css">
@@ -17,31 +21,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- Start Header -->
+        <!-- ======== to top botton ========== -->
+        <div class="to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <!-- ======== Start Header ======== -->
         <header>
             <div class="container">
-                <img src="img/logo.png" alt="logo">
+                <img src="img/logo.png" alt="logo" data-aos="zoom-in">
                 <nav>
                     <i class="fa-solid fa-list-ul list"></i>
                     <ul>
-                        <li><a class="active" href="#HOME">HOME</a></li>
-                        <li><a href="#SERVICES">SERVICES</a></li>
-                        <li><a href="#PORTFOLIO">PORTFOLIO</a></li>
-                        <li><a href="#ABOUT">ABOUT</a></li>
-                        <li><a href="#PRICING">PRICING</a></li>
-                        <li><a href="#CONTACT">CONTACT</a></li>
+                        <li><a class="active" href="#HOME" data-aos="fade-up" data-aos-delay="50">HOME</a></li>
+                        <li><a href="#services" data-aos="fade-up" data-aos-delay="150">SERVICES</a></li>
+                        <li><a href="#portfolio" data-aos="fade-up" data-aos-delay="250">PORTFOLIO</a></li>
+                        <li><a href="#about" data-aos="fade-up" data-aos-delay="350">ABOUT</a></li>
+                        <li><a href="#pricing" data-aos="fade-up" data-aos-delay="450">PRICING</a></li>
+                        <li><a href="#contact" data-aos="fade-up" data-aos-delay="550">CONTACT</a></li>
                     </ul>
-                    <div class="form">
+                    <div class="form" data-aos="fade-left" data-aos-delay="650">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </nav>
             </div>
         </header>
-        <!-- End Header -->
-        <!-- Start Landing -->
+        <!-- ======== End Header ======== -->
+        <!-- ======== Start Landing ======== -->
         <div class="landing">
             <div class="overlay"></div>
-            <div class="text">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/landing.jpg" alt="img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/landing-2.jpg" alt="img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/landing-3.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="text" data-aos="fade-right" data-aos-delay="700">
                 <div class="content">
                     <h2>
                         HELLO WORLD! <br>
@@ -50,24 +72,19 @@
                     <p>
                         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, 
                         eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at 
-                        sem. Mauris blandit aliquet elit, eget tincidunt.
+                        sem.
                     </p>
                 </div>
             </div>
             <i class="fa-solid fa-chevron-right arrow right"></i>
             <i class="fa-solid fa-chevron-left arrow left"></i>
-            <ul class="shape">
-                <li></li>
-                <li class="active"></li>
-                <li></li>
-            </ul>
         </div>
-        <!-- End Landing -->
+        <!-- ======== End Landing ======== -->
         <!-- Start Services -->
-        <div class="Services">
+        <div class="Services" id="services">
             <div class="container">
                 <!-- main head -->
-                <div class="main_head">
+                <div class="main_head" data-aos="zoom-in-up">
                     <h2>Services</h2>
                     <p>
                         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
@@ -76,7 +93,10 @@
                 </div>
                 <div class="contant-srv">
                     <!-- box one -->
-                    <div class="box-srv">
+                    <div class="box-srv"
+                                data-aos="fade-up"
+                                data-aos-anchor-placement="center-bottom"
+                                data-aos-delay="300">
                         <i class="fa-solid fa-desktop"></i>
                         <div class="text">
                             <h3>Vorem amet intuitive </h3>
@@ -88,7 +108,10 @@
                         </div>
                     </div>
                     <!-- box two -->
-                    <div class="box-srv">
+                    <div class="box-srv"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="300">
                         <i class="fa-sharp fa-solid fa-gear"></i>
                         <div class="text">
                             <h3>Vorem amet intuitive </h3>
@@ -100,7 +123,10 @@
                         </div>
                     </div>
                     <!-- box three -->
-                    <div class="box-srv">
+                    <div class="box-srv"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="300">
                         <i class="fa-solid fa-pen-ruler"></i>
                         <div class="text">
                             <h3>Vorem amet intuitive </h3>
@@ -112,7 +138,10 @@
                         </div>
                     </div>
                     <!-- box four -->
-                    <div class="box-srv">
+                    <div class="box-srv"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="center-bottom"
+                        data-aos-delay="300">
                         <i class="fa-solid fa-camera-retro"></i>
                         <div class="text">
                             <h3>Vorem amet intuitive </h3>
@@ -126,13 +155,14 @@
                 </div>
             </div>
         </div>
-        <!-- End Services -->
-        <!-- Start phone -->
+        <!-- ======== End Services ======== -->
+        <!-- ======== Start phone ======== -->
         <div class="phone">
-            <div class="photo">
-                <img src="img/phone.PNG" alt="PHONS">
+            <div class="photo" >
+                <img src="img/phone.PNG" alt="PHONS" data-aos="fade-up"
+                    ata-aos-anchor-placement="bottom-bottom"  data-aos-offset="230">
             </div>
-            <div class="text">
+            <div class="text" data-aos="fade-left" data-aos-offset="230">
                 <div class="content">
                     <h3>OUR DESIGNS COMES WITH...</h3>
                     <ul>
@@ -145,12 +175,12 @@
                 </ul>
             </div>
         </div>
-        <!-- End phone -->
-        <!-- Start PORTFOLIO -->
-        <div class="portfolio">
+        <!-- ======== End phone ======== -->
+        <!-- ======== Start PORTFOLIO ======== -->
+        <div class="portfolio" id="portfolio">
             <div class="container">
                 <!-- main head -->
-                <div class="main_head">
+                <div class="main_head" data-aos="zoom-in-up">
                     <h2>PORTFOLIO</h2>
                     <p>
                         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
@@ -159,33 +189,33 @@
                 </div>
                 <div class="shuffel">
                     <ul>
-                        <li class="active">ALL</li>
-                        <li>APP</li>
-                        <li>PHOTOGRAPHY</li>
-                        <li>WEB</li>
-                        <li>PRINT</li>
+                        <li class="active" data-por="all" >ALL</li>
+                        <li data-por=".app">APP</li>
+                        <li data-por=".photography">PHOTOGRAPHY</li>
+                        <li data-por=".web">WEB</li>
+                        <li data-por=".product">PRODUCT</li>
                     </ul>
                 </div>
             </div>
             <div class="portfolio-content">
                 <!-- box 1 -->
-                <div class="box">
+                <div class="box app" data-aos="flip-up" data-aos-duration="230">
                     <img src="img/product 1.jpg" alt="portfolio">
                     <div class="text">
                         <h3>Awesome Image</h3>
-                        <p>Photography</p>
+                        <p>APP</p>
                     </div>
                 </div>
                 <!-- box 2 -->
-                <div class="box">
+                <div class="box app" data-aos="flip-up" data-aos-duration="230" data-aos-delay="100">
                     <img src="img/product 2.jpg" alt="portfolio">
                     <div class="text">
                         <h3>Awesome Image</h3>
-                        <p>Photography</p>
+                        <p>APP</p>
                     </div>
                 </div>
                 <!-- box 3 -->
-                <div class="box">
+                <div class="box photography" data-aos="flip-up" data-aos-duration="230" data-aos-delay="200">
                     <img src="img/product 3.jpg" alt="portfolio">
                     <div class="text">
                         <h3>Awesome Image</h3>
@@ -193,7 +223,7 @@
                     </div>
                 </div>
                 <!-- box 4 -->
-                <div class="box">
+                <div class="box photography" data-aos="flip-up" data-aos-duration="230" data-aos-delay="300">
                     <img src="img/product 4.jpg" alt="portfolio">
                     <div class="text">
                         <h3>Awesome Image</h3>
@@ -201,181 +231,269 @@
                     </div>
                 </div>
                 <!-- box 5 -->
-                <div class="box">
+                <div class="box web" data-aos="flip-up" data-aos-duration="230" data-aos-delay="400">
                     <img src="img/product 5.jpg" alt="portfolio">
                     <div class="text">
                         <h3>Awesome Image</h3>
-                        <p>Photography</p>
+                        <p>WEB</p>
                     </div>
                 </div>
                 <!-- box 6 -->
-                <div class="box">
+                <div class="box web" data-aos="flip-up" data-aos-duration="230" data-aos-delay="500">
                     <img src="img/product 6.jpg" alt="portfolio">
                     <div class="text">
                         <h3>Awesome Image</h3>
-                        <p>Photography</p>
+                        <p>WEB</p>
                     </div>
                 </div>
                 <!-- box 7 -->
-                <div class="box">
+                <div class="box product" data-aos="flip-up" data-aos-duration="230" data-aos-delay="600">
                     <img src="img/product 7.jpg" alt="portfolio">
                     <div class="text">
                         <h3>Awesome Image</h3>
-                        <p>Photography</p>
+                        <p>product</p>
                     </div>
                 </div>
                 <!-- box 8 -->
-                <div class="box">
+                <div class="box product" data-aos="flip-up" data-aos-duration="230" data-aos-delay="700">
                     <img src="img/product 8.jpg" alt="portfolio">
                     <div class="text">
                         <h3>Awesome Image</h3>
-                        <p>Photography</p>
+                        <p>product</p>
                     </div>
                 </div>
             </div>
             <button>MORE</button>
         </div>
-        <!-- End PORTFOLIO -->
-        <!-- Strar VIDEO -->
+        <!-- ======== End PORTFOLIO ======== -->
+        <!-- ======== Start VIDEO ======== -->
         <div class="video">
             <video src="img/video.mp4" type=mp4 muted loop autoplay></video>
             <div class="text">
-                <h3>SUPER AWESOME VIDEO HERE</h3>
-                <p>Its all you need</p>
-                <button>SEE MORE</button>
+                <div class="zoom" data-aos="zoom-in">
+                    <h3>SUPER AWESOME VIDEO HERE</h3>
+                    <p>Its all you need</p>
+                    <button>SEE MORE</button>
+                </div>
             </div>
         </div>
-        <!-- End VIDEO -->
-        <!-- Start ABOUT US -->
-        <div class="about">
+        <!-- ======== End VIDEO ======== -->
+        <!-- ======== Start ABOUT US ======== -->
+        <div class="about" id="about">
             <div class="container">
                 <!-- main head -->
-                <div class="main_head">
+                <div class="main_head" data-aos="zoom-in-up">
                     <h2>ABOUT US</h2>
                     <p>
                         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
                         blandit aliquet elit, eget tincidunt.
                     </p>
                 </div>
-                <img src="img/tab.png" alt="tablat">
+                <img src="img/tab.png" alt="tablat" data-aos="fade-up"
+                data-aos-anchor-placement="top-center" data-aos-once="true">
             </div>
         </div>
-        <!-- End ABOUT US -->
-        <!-- Start Stat -->
+        <!-- ======== End ABOUT US ======== -->
+        <!-- ======== Start Stat ======== -->
         <div class="stat">
             <div class="container">
                 <div class="box">
                     <i class="fa-light fa-mug-hot"></i>
-                    <div class="num">1,263</div>
+                    <div class="num" data-num="663">0</div>
                     <p>Coffee Drinks</p>
                 </div>
                 <div class="box">
                     <i class="fa-light fa-folder-open"></i>
-                    <div class="num">256</div>
+                    <div class="num" data-num="456">0</div>
                     <p>Completed Projects</p>
                 </div>
                 <div class="box">
                     <i class="fa-regular fa-envelope-open"></i>
-                    <div class="num">1,743</div>
+                    <div class="num" data-num="743">0</div>
                     <p>Mail Sent</p>
                 </div>
                 <div class="box">
                     <i class="fa-thin fa-medal"></i>
-                    <div class="num">17</div>
+                    <div class="num" data-num="143">0</div>
                     <p>Awards Received</p>
                 </div>
             </div>
         </div>
-        <!-- End Stat -->
-        <!-- Start OUR SKILLS -->
+        <!-- ======== End Stat ======== -->
+        <!-- ======== Start OUR SKILLS ======== -->
         <div class="our-skills">
             <div class="container">
+                <!-- test -->
                 <div class="test">
-                    <h3>TESTIMONIALS</h3>
-                    <p>
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
-                        blandit aliquet elit, eget tincidunt.
-                    </p>
-                    <div class="box">
-                        <div class="photo">
-                            <img src="img/face1.jpg" alt="img">
-                        </div>
-                        <div class="text">
-                            <p>
-                                Curabitur arcu erat, accumsan id imperdiet et, 
-                                porttitor at sem. Mauris blandit aliquet elit, eget 
-                                tincidunt.
-                            </p>
-                            <span>John Doe,CEO</span>
-                        </div>
+                    <div class="title" data-aos="zoom-in-right" data-aos-offset="200">
+                        <h3>TESTIMONIALS</h3>
+                        <p>
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
+                            blandit aliquet elit, eget tincidunt.
+                        </p>
                     </div>
-                    <div class="box">
-                        <div class="photo">
-                            <img src="img/face2.jpg" alt="img">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- Box -->
+                                <div class="box">
+                                    <div class="photo">
+                                        <img src="img/face1.jpg" alt="img">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Curabitur arcu erat, accumsan id imperdiet et,
+                                            porttitor at sem. Mauris blandit aliquet elit, eget
+                                            tincidunt.
+                                        </p>
+                                        <span>John Doe,CEO</span>
+                                    </div>
+                                </div>
+                                <!-- Box -->
+                                <div class="box">
+                                    <div class="photo">
+                                        <img src="img/face2.jpg" alt="img">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Curabitur arcu erat, accumsan id imperdiet et,
+                                            porttitor at sem. Mauris blandit aliquet elit, eget
+                                            tincidunt.
+                                        </p>
+                                        <span>Monica Bailey,Investor</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- Box -->
+                                <div class="box">
+                                    <div class="photo">
+                                        <img src="img/face4.jpg" alt="img">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Curabitur arcu erat, accumsan id imperdiet et,
+                                            porttitor at sem. Mauris blandit aliquet elit, eget
+                                            tincidunt.
+                                        </p>
+                                        <span>John Doe,CEO</span>
+                                    </div>
+                                </div>
+                                <!-- Box -->
+                                <div class="box">
+                                    <div class="photo">
+                                        <img src="img/face3.jpg" alt="img">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Curabitur arcu erat, accumsan id imperdiet et,
+                                            porttitor at sem. Mauris blandit aliquet elit, eget
+                                            tincidunt.
+                                        </p>
+                                        <span>Monica Bailey,Investor</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- Box -->
+                                <div class="box">
+                                    <div class="photo">
+                                        <img src="img/face5.jpg" alt="img">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Curabitur arcu erat, accumsan id imperdiet et,
+                                            porttitor at sem. Mauris blandit aliquet elit, eget
+                                            tincidunt.
+                                        </p>
+                                        <span>John Doe,CEO</span>
+                                    </div>
+                                </div>
+                                <!-- Box -->
+                                <div class="box">
+                                    <div class="photo">
+                                        <img src="img/face6.jpg" alt="img">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Curabitur arcu erat, accumsan id imperdiet et,
+                                            porttitor at sem. Mauris blandit aliquet elit, eget
+                                            tincidunt.
+                                        </p>
+                                        <span>Monica Bailey,Investor</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <p>
-                                Curabitur arcu erat, accumsan id imperdiet et, 
-                                porttitor at sem. Mauris blandit aliquet elit, eget 
-                                tincidunt.
-                            </p>
-                            <span>John Doe,CEO</span>
-                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <ul class="shape">
-                        <li></li>
-                        <li class="active"></li>
-                        <li></li>
-                    </ul>
+                    
                 </div>
+                <!-- skills -->
                 <div class="skills">
-                    <h3>OUR SKILLS</h3>
-                    <p>
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
-                        blandit aliquet elit, eget tincidunt.
-                    </p>
+                    <div class="title" data-aos="zoom-in-right" data-aos-offset="200">
+                        <h3>OUR SKILLS</h3>
+                        <p>
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
+                            blandit aliquet elit, eget tincidunt.
+                        </p>
+                    </div>
                     <div class="hold">
                         <h4>ADOBE</h4>
+                        
                         <div class="par">
-                            <span style="width: 90%;" num="90%"></span>
+                            <span class="par" data-num="90">
+                                <span class="rate">0%</span>
+                            </span>
                         </div>
                     </div>
                     <div class="hold">
                         <h4>HTML & CSS</h4>
                         <div class="par">
-                            <span style="width: 93%;" num="93%"></span>
+                            <span data-num="93">
+                                <span class="rate">0%</span>
+                            </span>
                         </div>
                     </div>
                     <div class="hold">
                         <h4>JAVASCRIPT</h4>
                         <div class="par">
-                            <span style="width: 85%;" num="85%"></span>
+                            <span data-num="85">
+                                <span class="rate">0%</span>
+                            </span>
                         </div>
                     </div>
                     <div class="hold">
                         <h4>PHP</h4>
                         <div class="par">
-                            <span style="width: 75%;" num="75%"></span>
+                            <span data-num="75">
+                                <span class="rate">0%</span>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End OUR SKILLS -->
-        <!-- End qu -->
+        <!-- ======== End OUR SKILLS ======== -->
+        <!-- ======== End qu ======== -->
         <div class="qu">
             <div class="container">
-                <q>Curabitur arcu erat, accumsan id imperdiet et, 
+                <q>
+                    Curabitur arcu erat, accumsan id imperdiet et, 
                     porttitor at sem. Mauris blandit aliquet elit, eget 
-                    tincidunt.</q>
+                    tincidunt.
+                </q>
                 <p>John Doe</p>
             </div>
         </div>
-        <!-- End qu -->
-        <!-- Start PRICING -->
-        <div class="pricing">
+        <!-- ======== End qu ======== -->
+        <!-- ======== Start PRICING ======== -->
+        <div class="pricing" id="pricing">
             <div class="container">
-                <div class="main_head">
+                <div class="main_head" data-aos="fade-up"  data-aos-offset="200">
                     <h2>PRICING</h2>
                     <p>
                         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
@@ -383,75 +501,79 @@
                     </p>
                 </div>
                 <div class="plans">
-                    <div class="plan">
-                         <div class="head">
+                    <div class="plan" data-aos="fade-up"  
+                    data-aos-anchor-placement="bottom-bottom" data-aos-once="true">
+                        <div class="head">
                             <h3>BASIC</h3>
                             <div class="price">19</div>
-                         </div>
-                         <ul>
+                        </div>
+                        <ul>
                             <li>Feature N0 1</li>
                             <li>Extra Feature </li>
                             <li>Feature N0 2</li>
                             <li>Feature</li>
-                         </ul>
-                         <div class="foot">
+                        </ul>
+                        <div class="foot">
                             <a href="">Buy Now</a>
-                         </div>
+                        </div>
                     </div>
-                    <div class="plan">
-                         <div class="head">
+                    <div class="plan" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-anchor-placement="bottom-bottom" data-aos-once="true">
+                        <div class="head">
                             <h3>PREMIUM</h3>
                             <div class="price">29</div>
-                         </div>
-                         <ul>
+                        </div>
+                        <ul>
                             <li>Feature N0 1</li>
                             <li>Extra Feature </li>
                             <li>Feature N0 2</li>
                             <li>Feature</li>
-                         </ul>
-                         <div class="foot">
+                        </ul>
+                        <div class="foot">
                             <a href="">Buy Now</a>
-                         </div>
+                        </div>
                     </div>
-                    <div class="plan">
-                         <div class="head">
+                    <div class="plan" data-aos="fade-up" data-aos-delay="400"
+                    data-aos-anchor-placement="bottom-bottom" data-aos-once="true">
+                        <div class="head">
                             <h3>PRO</h3>
                             <div class="price">39</div>
-                         </div>
-                         <ul>
+                        </div>
+                        <ul>
                             <li>Feature N0 1</li>
                             <li>Extra Feature </li>
                             <li>Feature N0 2</li>
                             <li>Feature</li>
-                         </ul>
-                         <div class="foot">
+                        </ul>
+                        <div class="foot">
                             <a href="">Buy Now</a>
-                         </div>
+                        </div>
                     </div>
-                    <div class="plan">
-                         <div class="head">
+                    <div class="plan" data-aos="fade-up" data-aos-delay="600"
+                    data-aos-anchor-placement="bottom-bottom" data-aos-once="true">
+                        <div class="head">
                             <h3>PLATINUM</h3>
                             <div class="price">49</div>
-                         </div>
-                         <ul>
+                        </div>
+                        <ul>
                             <li>Feature N0 1</li>
                             <li>Extra Feature </li>
                             <li>Feature N0 2</li>
                             <li>Feature</li>
-                         </ul>
-                         <div class="foot">
+                        </ul>
+                        <div class="foot">
                             <a href="">Buy Now</a>
-                         </div>
+                        </div>
                     </div>
                 </div>
                 <div class="text">
                     <p> Curabitur arcu erat, accumsan id imperdiet et</p>
-                    <a href="#">CONTACT US</a>
+                    <a href="#contact">CONTACT US</a>
                 </div>
             </div>
         </div>
-        <!-- End PRICING -->
-        <!-- Start Message -->
+        <!-- ======== End PRICING ======== -->
+        <!-- ======== Start Message ======== -->
         <div class="message">
             <div class="container">
                     <form action="">
@@ -459,16 +581,17 @@
                         <input type="email" name="emil" placeholder="YOUR MAIL">
                         <input type="submit" value="SUBSCRIBE">
                     </form>
-                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan
+                    <p>
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan
                         dit aliquet elit, eget tincidunt.
                     </p>
             </div>
         </div>
-        <!-- End Message -->
-        <!--Start CONTACT US -->
-        <div class="contact">
+        <!-- ======== End Message ======== -->
+        <!-- ======== Start CONTACT US ======== -->
+        <div class="contact" id="contact">
             <div class="container">
-                <div class="main_head">
+                <div class="main_head" data-aos="fade-up" data-aos-offset="200">
                     <h2>CONTACT US</h2>
                     <p>
                         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
@@ -506,7 +629,8 @@
                 </div>
             </div>
         </div>
-        <!-- End CONTACT US -->
+        <!-- ======== End CONTACT US ======== -->
+        <!-- ======== End footer ======== -->
         <footer>
             <div class="container">
                 <img src="img/logo.png" alt="logo">
@@ -515,12 +639,20 @@
                     <a href="www.youtube.com"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="www.twitter.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="copy">
-                    <p> &copy; 2022 - <span>Kasper</span> All Right Reserved</p>
+                    <p> &copy; <span class="date"></span> - <span>Kasper</span> All Right Reserved</p>
                 </div>
             </div>
         </footer>
+        <!-- ======== Start footer ======== -->
+        <!-- JS files -->
+        <!-- swiper library -->
+        <script src="JS/swiper-bundle.min.js"></script>
+        <!-- swiper library -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- main -->
+        <script src="JS/main.js"></script>
     </body>
 </html>

@@ -73,8 +73,6 @@ body{
 /* End some tools use it in work */
 /* container of page */
 .container{
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -98,6 +96,25 @@ body{
 }
 /* End container */
 /* End global rules */
+/* to top button */
+.to-top {
+    display: none;
+    font-size: 25px;
+    padding: 7px 17px;
+    background-color: var(--transparent-color);
+    width: fit-content;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    transition: .3s;
+}
+.to-top:hover {
+    background-color: var(--main-color);
+}
 /* Start header */
 header{
     position: absolute;
@@ -169,18 +186,23 @@ header nav .form i:hover{
 header .list{
     color: white;
     font-size: 25px;
+    cursor: pointer;
     display: none;
 }
+header .list.open{
+    color: var(--main-color);
+}
+
+
 @media (max-width:768px){
     header .list{
         display: block;
     }
-}
-@media (max-width:768px){
+    
     header .container ul{
         display: none;
     }
-    header nav .list:hover + ul {
+    header nav .list.open + ul {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -189,7 +211,7 @@ header .list{
         width: 100%;
         background-color: rgba(0, 0, 0, 50%);
     }
-    header nav .list:hover + ul a{
+    header nav .list + ul a{
         padding-bottom: 15px;
     }
 }
@@ -199,7 +221,6 @@ header .list{
     width: 100%;
     height: 100vh;
     background-color: #1F2021;
-    background-image: url(../img/landing.jpg);
     background-size: cover;
     position: relative;
 }
@@ -209,16 +230,27 @@ header .list{
     height: 100%;
     background-color: rgba(0, 0, 0, 50%);
 }
+.landing .swiper{
+    width: 100%;
+    height: 100%;
+}
+.landing .swiper img{
+    width: 100%;
+    height: 100vb;
+    object-fit: cover;
+    display: block;
+}
 .landing .text{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    margin-top: -150px;
     padding: 50px;
     width: 50%;
     color: white;
     background-color: var(--transparent-color);
     display: flex;
     justify-content: flex-end;
+    z-index: 1;
 }
 .landing .text .content{
     max-width: 450px;
@@ -239,6 +271,7 @@ header .list{
     font-size: 30px;
     color: white;
     cursor: pointer;
+    z-index: 99;
 }
 .landing .arrow.right{
     position: absolute;
@@ -250,9 +283,24 @@ header .list{
     top: 50%;
     left: 20px;
 }
+.landing .swiper .swiper-pagination {
+    background-color: #dddddd0e;
+    width: fit-content;
+    padding: 7px 10px;
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.landing .swiper .swiper-pagination span {
+    width: 15px;
+    height: 15px;
+}
 @media (max-width:767px){
     .landing .text{
-        width:calc(100% - 100px);
+        width:calc(100% - 40px);
+        padding: 30px 20px;
     }
     .landing .text .container{
         max-width: 100%;
@@ -260,25 +308,6 @@ header .list{
     .landing .arrow{
         display: none;
     }
-}
-.landing .shape{
-    display: flex;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.landing .shape li{
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%;
-    margin: 5px;
-    cursor: pointer;
-}
-.landing .shape .active{
-    background-color: var(--main-color);
-    border-color: var(--main-color);
 }
 /* End landing */
 /* Start Services */
@@ -409,6 +438,7 @@ header .list{
 .portfolio .shuffel ul li{
     margin: 0px 20px;
     padding: 20px;
+    transition: .3s;
 }
 .portfolio .shuffel ul .active ,
 .portfolio .shuffel ul li:hover{
@@ -418,11 +448,11 @@ header .list{
 }
 @media (max-width:992px){
     .portfolio .shuffel ul{
-        font-size: 16px;
+        font-size: 15px;
     }
     .portfolio .shuffel ul li{
         margin: 0;
-        padding: 10px;
+        padding: 7px;
     }
 }
 .portfolio-content{
@@ -450,6 +480,7 @@ header .list{
 }
 .portfolio-content img{
     max-width: 100%;
+    transition: .3s;
 
 }
 .portfolio-content .box .text{
@@ -511,10 +542,12 @@ header .list{
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-    background-color: var(--transparent-color);
-    padding: 50px 0;
     color: white;
     z-index: 2;
+}
+.video .text .zoom {
+    padding: 50px 0;
+    background-color: var(--transparent-color);
 }
 .video .text h3{
     font-weight: normal;
@@ -535,9 +568,22 @@ header .list{
     cursor: pointer;
 }
 @media (max-width:767px){
-    .video .text{
-        padding: 5px 0;
+    .video .zoom{
+        padding: 10px 0 !important;
     }
+    .video .text h3{
+        font-size: 25px !important;
+        margin-bottom: 20px !important;
+    }
+    .video .text p{
+        font-size: 17px !important;
+        margin-bottom: 20px !important;
+    }
+    .video .text button{
+        padding: 7px 20px !important;
+        margin-bottom: 20px !important;
+    }
+
 }
 /* End VIDEO  */
 /* Start ABOUT US */
@@ -555,8 +601,8 @@ header .list{
 }
 @media (max-width:767px){
     .about img{
-        bottom: -45px;
-        margin-top: -40px;
+        margin-top: -20px;
+        bottom: -90px;
     }
 }
 /* End ABOUT US */
@@ -651,27 +697,44 @@ header .list{
         flex-direction: column;
     }
 }
-.our-skills .container > div {
+.our-skills .container .test,
+.our-skills .container .skills{
     flex-basis: 45%;
+    max-width: 45%;
     margin-bottom: 60px;
     position: relative;
 }
-.our-skills .container > div > h3{
+.our-skills .container .test .title h3,
+.our-skills .container .skills .title h3{
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
     font-size: 25px;
 }
-.our-skills .container > div > p{
+.our-skills .container .test .title p,
+.our-skills .container .skills .title p{
     text-align: center;
     margin-bottom: 60px;
     color: var(--color-p);
 }
+.our-skills .mySwiper {
+    flex-basis: 100%;
+    height: 100%;
+}
+.our-skills .mySwiper .swiper-pagination {
+    margin-bottom: 150px;
+}
+.our-skills .mySwiper .swiper-pagination span {
+    width: 15px;
+    height: 15px;
+}
+
 .our-skills .test .box{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 70px 0px;
+    flex-basis: 100%;
     position: relative;
 }
 .our-skills .test .box img{
@@ -690,33 +753,21 @@ header .list{
     margin: 10px;
     text-align: end;
 }
-.our-skills .shape{
-    display: flex;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.our-skills .shape li{
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
-    border-radius: 50%;
-    margin: 5px;
-    cursor: pointer;
-}
-.our-skills .shape .active{
-    background-color: var(--main-color);
-    border-color: var(--main-color);
-}
 @media (max-width:767px){
-    .our-skills .shape{
-        bottom: -20px;
+    .our-skills .container .test,
+    .our-skills .container .skills{
+        flex-basis: 97% !important;
+        max-width: 97% !important;
+        margin: auto;
+    }
+    .mySwiper .swiper-pagination {
+        margin-bottom: 0px;
     }
 }
 .our-skills .hold{
     margin-bottom: 40px;
     width: 100%;
+    position: relative;
 }
 .our-skills .hold h4{
     margin-bottom: 15px;
@@ -728,26 +779,29 @@ header .list{
 .our-skills .hold .par span{
     display: block;
     background-color: var(--main-color);
+    width: 0%;
     height: 100%;
     position: relative;
 }
-.our-skills .hold .par span::before{
-    content: attr(num);
+.our-skills .hold span.rate{
     background-color: rgba(0, 0, 0, 0.856);
     color: white;
-    padding: 3px 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 17px;
     position: absolute;
-    top: -35px;
-    right: -27px;
+    top: -45px;
+    right: -22px;
 }
-.our-skills .hold .par span::after{
+.our-skills .hold span.rate::after{
     content: "";
     border-style: solid;
     border-width: 9px;
-    border-color: black transparent transparent transparent;
+    border-color: rgba(0, 0, 0, 0.856) transparent transparent transparent;
     position: absolute;
-    top: -11px;
-    right: -9px;
+    bottom: -16px;
+    right: 40%
 }
 /* End OUR SKILLS */
 /* Start qu */
@@ -852,6 +906,11 @@ header .list{
     padding: 7px 20px;
     color: black;
     border: 1px solid var(--main-color);
+    transition: .3s;
+}
+.pricing .plans .foot a:hover{
+    background-color: var(--main-color);
+    color: white;
 }
 .pricing .text{
     text-align: center;
@@ -865,6 +924,12 @@ header .list{
     background-color: var(--main-color);
     color: white;
     padding: 10px 20px;
+    transition: .3s;
+}
+.pricing .text a:hover{
+    background-color:white;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
 }
 /* End Pricing*/
 /* Start Message*/
@@ -925,6 +990,7 @@ header .list{
     border-left: 0px solid transparent;
     padding: 15px;
     position: relative;
+    cursor: pointer;
     left: -4px
 }
 .message  form input[type="email"]:focus,
@@ -981,7 +1047,6 @@ header .list{
     border: none;
     padding: 20px;
     color: white;
-    margin-left: auto;
     margin-right: 20px;
     cursor: pointer;
 }
@@ -995,6 +1060,7 @@ header .list{
         display: flex;
         justify-content: space-evenly;
         margin-top: 50px;
+        flex-wrap: nowrap;
     }
 }
 .contact .content .info h3{
@@ -1010,6 +1076,19 @@ header .list{
     font-size: 17px;
     color: var(--color-p);
     line-height: 1.6;
+}
+@media (max-width:767px) {
+    .contact .content .form .in {
+        width: 80%;
+        text-align: center;
+        margin-left: 20px;
+    }
+    .contact .content .form input[ type="submit"] {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
 }
 /* End contact*/
 /* Start footer */
@@ -1052,6 +1131,9 @@ footer .container .icon a{
     display: inline-block;
     font-size: 25px;
     padding: 20px;
+}
+footer .container .icon a:hover{
+    color: var(--main-color);
 }
 footer .container .copy{
     position: relative;
